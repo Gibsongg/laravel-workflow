@@ -26,4 +26,14 @@ class TestModel
 
         $this->attributes[$name] = $value;
     }
+
+    public function isValidate(): bool
+    {
+        return true;
+    }
+
+    public function isInvalidate(): bool
+    {
+        return false;
+    }
 }
