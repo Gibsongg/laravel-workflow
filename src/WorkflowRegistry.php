@@ -180,8 +180,8 @@ class WorkflowRegistry
 
             } elseif ($workflowData['type'] === 'state_machine') {
                 foreach ($transition['from'] as $from) {
-                    $transitionObj = new Transition($transitionName, $from, $transition['to']);
-                    $builder->addTransition($transitionObj);
+                    $transitionObject = new Transition($transitionName, $from, $transition['to']);
+                    $builder->addTransition($transitionObject);
 
                     foreach ($transition['to'] as $to) {
                         if (isset($transition['guard'])) {
